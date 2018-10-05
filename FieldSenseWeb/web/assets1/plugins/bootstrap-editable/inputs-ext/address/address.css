@@ -1,0 +1,15 @@
+.editable-address {
+    display: inline-block;
+    margin-bottom: 5px;  
+}
+
+.editable-address span {
+    width: 70px;  
+    display: inline-block;
+}
+.editable-input{
+	margin-bottom: 5px;  
+}
+.popover-content{
+	max-width: 276px !important;
+}

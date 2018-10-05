@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--antiJARLocking is used in tomcat 7 -->
+<!--<Context antiJARLocking="true" path="/FieldSenseWeb"/>-->
+
+
+<!--antiResourceLocking is used in tomcat 8 -->
+<!--If true, Tomcat will prevent any file locking. This will significantly impact 
+    startup time of applications, but allows full webapp hot deploy and undeploy on 
+    platforms or configurations where file locking can occur. If not specified,
+    the default value is false.-->
+    
+<!--    <Context antiResourceLocking="true" path="/FieldSenseWeb"/>-->
+<Context antiResourceLocking="false" path="/FieldSenseWeb"/>

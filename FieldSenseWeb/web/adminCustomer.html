@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--
+Template Name: Conquer - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0.3
+Version: 1.5.2
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Purchase: http://themeforest.net/item/conquer-responsive-admin-dashboard-template/3716838?ref=keenthemes
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>FieldSense</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta name="MobileOptimized" content="320">
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="assets/plugins/bootstrap/css/bootstrap-drilldown-select.css" rel="stylesheet" type="text/css"/>
+
+        <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+        <link href="assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet"/>
+        <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet"/>
+        <!-- Changes for mozila browser commented
+        <link href="assets/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css"/>
+                <link href="assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>-->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datepicker/css/datepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/clockface-1.0.1/css/clockface.css"/> <!--Added by jyoti -->
+        <!-- BEGIN TITLE DROPDOWN STYLES -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2_conquer.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-editable/bootstrap-editable/css/bootstrap-editable.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-editable/inputs-ext/address/address.css"/>
+        <!-- BEGIN TITLE DROPDOWN STYLES -->
+
+        <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-toastr/toastr.min.css"/>
+        <!-- END PAGE LEVEL PLUGIN STYLES -->
+        <!-- BEGIN THEME STYLES -->
+        <link href="assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <!-- END THEME STYLES -->
+	<!-- JQUERY TREE GRID -->	
+	<link rel="stylesheet" href="assets/plugins/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+         <script type="text/javascript">
+            var clevertap = {event: [], profile: [], account: [], onUserLogin: [], notifications: []};
+            // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+            clevertap.account.push({"id": "W6K-957-5W5Z"});
+            (function () {
+                var wzrk = document.createElement('script');
+                wzrk.type = 'text/javascript';
+                wzrk.async = true;
+                wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wzrk, s);
+            })();
+        </script>
+    </head>
+    <!-- END HEAD -->
+    <!-- BEGIN BODY -->
+    <body class="page-header-fixed page-footer-fixed page-sidebar-fixed">
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-inverse navbar-fixed-top">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="header-inner">
+                <!-- BEGIN LOGO -->
+                <a class="navbar-brand" href="adminUser.html">
+                    <img src="assets/img/logo.png" alt="logo" class="img-responsive"/>
+                </a>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <img src="assets/img/menu-toggler.png" alt=""/>
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul id="top_tabs" class="nav navbar-nav pull-left">
+                    <li class="inactive">
+                        <a href="adminUser.html">Users</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="orgChart.html">Reporting Structure</a>
+                    </li>
+                    <li class="active">
+                        <a href="adminCustomer.html">Customers</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="masterData.html">Master Data</a>
+                    </li>
+		   <li class="inactive" >
+                        <a href="adminForms.html">Forms</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="adminReports.html">Reports</a>
+                    </li>
+
+                </ul>		
+
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" id="id_usaerImage">
+                        </a>
+                        <ul class="dropdown-menu" id="id_loginuser">
+                            <li></li>
+                        </ul>					
+                    </li>	
+                    <!-- END USER LOGIN DROPDOWN -->		
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar-wrapper">
+                    <div class="page-sidebar navbar-collapse collapse">
+                        <!-- BEGIN SIDEBAR MENU -->
+                        <span id="id_leftMenu">
+
+                        </span>
+
+                        <!-- END SIDEBAR MENU -->
+                    </div>
+                </div>
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content-wrapper">
+                    <div class="page-content" id="id_editCustomerPage">
+
+                        <!-- BEGIN PAGE HEADER-->
+                        <div id="acti" class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top:15px !important;"></div>
+                                <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                                <!--                                <ul class="page-breadcrumb breadcrumb">
+                                                                    <li>
+                                                                        <i class="fa fa-user"></i>
+                                                                        <a href="adminCustomer.html">Customers</a>
+                                                                    </li>
+                                                                </ul>-->
+                                <!-- END PAGE TITLE & BREADCRUMB-->
+                            </div>
+                        </div>
+                        <!-- END PAGE HEADER-->
+                        <!-- BEGIN PAGE CONTENT-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                                <div class="portlet-body">	
+                                    <div class="search">
+                                        <input type="text" aria-controls="sample_2" id="id_searchText" class="form-control input-large" placeholder="Search" autofocus>
+                                        <div class="actions">
+                                            <a data-toggle="modal" href="" class="btn btn-info" onClick="showCustomers();
+                                                return false;"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 fr">
+                                        <button type="button" class="btn btn-info fr" style="margin-right:-15px;" onclick="window.location = 'add_customerAdmin.html';
+                                            createCustomerTemplate();"><i class="fa fa-plus"></i> Add Customer</button>
+                                        <!--<button type="button" class="btn btn-info fr" style="margin-right:5px;" data-toggle="modal" href="#responsive"><i class="fa fa-download"></i> Import Customer</button>-->
+                                        <button type="button" class="btn btn-info fr" style="margin-right:5px;" onclick="window.location = 'adm_import_cst.html';"><i class="fa fa-download"></i> Import Customers</button>	
+                                        <button type="button" class="btn btn-info fr" style="margin-right:5px;" onclick="window.location = 'adm_import_cnt.html';"><i class="fa fa-download"></i> Import Contacts</button>
+                                    </div>
+
+                                    <!--                                    <table class="table table-striped table-bordered table-hover cls_customerdetails" id="sample_2">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        Customer Name
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        Phone
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        Email
+                                                                                    </th>
+                                                                                    <th class="hidden-xs">
+                                                                                        Industry
+                                                                                    </th>		
+                                                                                    <th class="hidden-xs">
+                                                                                        Territory
+                                                                                    </th>
+                                                                                    <th>
+                                                                                    </th>								
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="id_customerdetails">
+                                                                            </tbody>
+                                                                        </table>-->
+                                    <span id="id_customerdetails"></span>
+                                </div>
+
+                                <!-- END EXAMPLE TABLE PORTLET-->							
+                            </div>
+                        </div>	
+
+                        <!-- Start Import Customer -->
+
+                        <!--                        <div id="responsive" class="modal fade cls_importCustomer" tabindex="-1" aria-hidden="true">
+                                                    <div class="modal-dialog modal-wide">
+                                                        <div class="modal-content">
+
+                                                            <div id="responsive" class="modal fade modal-scroll cls_importCustomer" tabindex="-1" aria-hidden="false" data-width="680">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                                <h4 class="modal-title">Import Customer</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                                                <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+                                                                <form id="fileupload" method="POST" enctype="multipart/form-data">
+                                                                     The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload
+                                                                    <div class="row fileupload-buttonbar">
+                                                                        <div class="col-lg-7">
+                                                                             The fileinput-button span is used to style the file input field as button
+                                                                            <span class="btn btn-info fileinput-button">
+                                                                                <i class="fa fa-plus"></i>
+                                                                                <span>
+                                                                                    Select file...
+                                                                                </span>
+                                                                                <input id="fileupload" type="file" name="files[]" data-url="http://localhost:8080/FieldSense/customer/importCustomer">
+                                                                            </span>
+                                                                             The loading indicator is shown during file processing
+                                                                            <span class="fileupload-loading">
+                                                                            </span>
+                                                                        </div>
+                                                                         The global progress information
+                                                                        <div class="col-lg-5 fileupload-progress fade">
+                                                                             The global progress bar
+                                                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                                                                                                                <div class="progress-bar progress-bar-success" style="width:0%;">
+                                                                                                                                </div>
+                                                                            </div>
+                                                                             The extended global progress information
+                                                                            <div class="progress-extended">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                     The table listing the files available for upload/download
+                                                                    <table role="presentation" class="table table-striped clearfix">
+                                                                        <tbody class="files">
+                                                                        </tbody>
+                                                                    </table>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#" style="margin-right: 444px;" onClick="downloadSampleCustomersFile();return false;">Click here to download sample file</a>
+                                                                <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+                        <!-- End Import Customer -->
+
+                        <!-- END PAGE CONTENT-->
+                    </div>
+                </div>
+            </div>
+            <!-- Loading-->
+
+            <div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Processing...</h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="progress progress-striped active">
+
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="40" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">
+                                        40% Complete (success)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+            <!-- Loading-->
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <div id="responsivechangepwd" class="modal fade cls_changePassword" tabindex="-1" role="basic" aria-hidden="true">
+        </div>
+        <div id="feedback" class="modal fade cls_userfeedback" tabindex="-1" role="basic" aria-hidden="true"></div>
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            <div class="footer-inner">
+                2012 - 2017 &copy; QuantumLink Communications. All Rights Reserved.
+            </div>
+            <div class="footer-tools">
+                <span class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </span>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.min.js"></script>
+        <script src="assets/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <!-- BEGIN TITLE DROPDOWN CORE PLUGINS -->
+        <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <!-- END TITLE DROPDOWN CORE PLUGINS -->
+
+
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap-drilldown-select.js"></script>
+        <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+        <!-- BEGIN TITLE DROPDOWN PLUGINS -->
+        <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/clockface/js/clockface.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+        <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+    <!--<script src="https://maps.google.com/maps/api/js?v=3&sensor=true&key=AIzaSyCbyDNMiP6JJz5yJZzisFhMQ9wpNuvLOk8" type="text/javascript"></script>-->
+    <script src="https://maps.google.com/maps/api/js?v=3&sensor=true&key=AIzaSyAAO_4N94liztbxKxximVndUQqbUlZK7OU" type="text/javascript"></script>
+        <script src="assets/plugins/gmaps/gmaps.js" type="text/javascript"></script>
+        <!-- END TITLE DROPDOWN PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+        <!-- END PAGE LEVEL PLUGINS-->
+        <!-- BEGIN:File Upload Plugin JS files-->
+        <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+        <!-- The Templates plugin is included to render the upload/download listings -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js"></script>
+        <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/load-image.min.js"></script>
+        <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js"></script>
+        <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+        <!-- The basic File Upload plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload.js"></script>
+        <!-- The File Upload processing plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+        <!-- The File Upload image preview & resize plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-image.js"></script>
+        <!-- The File Upload audio preview plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-audio.js"></script>
+        <!-- The File Upload video preview plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-video.js"></script>
+        <!-- The File Upload validation plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+        <!-- The File Upload user interface plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+        <!-- The main application script -->
+        <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
+        <!--[if (gte IE 8)&(lt IE 10)]>
+        <script src="assets/plugins/jquery-file-upload/js/cors/jquery.xdr-transport.js"></script>
+        <![endif]-->
+        <!-- END:File Upload Plugin JS files-->
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="assets/scripts/app.js" type="text/javascript"></script>
+        <script src="assets/scripts/table-advanced.js"></script>
+        <script src="assets/scripts/ui-extended-modals.js"></script>
+        <script src="assets/scripts/form-components.js"></script>
+        <!--<script src="assets/scripts/form-fileupload.js"></script>-->
+
+        <script src="assets/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/ui-toastr.js" type="text/javascript"></script>
+
+        <!-- BEGIN PLUGINS USED BY X-EDITABLE -->
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery.mockjax.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-editable/bootstrap-editable/js/bootstrap-editable.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-editable/inputs-ext/address/address.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-editable/inputs-ext/wysihtml5/wysihtml5.js"></script>
+        <!-- END X-EDITABLE PLUGIN -->
+        <script src="assets/scripts/form-editable.js"></script>
+
+	<!--Confirm modal-->
+	<script src="assets/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+
+	<!-- JQUERY TREE GRID -->
+	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxcore.js"></script>
+   	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdata.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdatatable.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxtreegrid.js"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <script src="FieldSenseJS/FieldSenseCommonMethods.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/FieldSenseUtils.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/customers.js" type="text/javascript"></script>
+        <script>
+            jQuery(document).ready(function() {
+
+                jQuery('.showSingle').click(function() {
+                    jQuery('.targetDTL').hide();                                                     
+		    jQuery('#cdetails').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+                jQuery('.showSingle2').click(function() {
+                    jQuery('.targetEDT').hide();
+                    jQuery('#ed_details').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+                jQuery('.showSingle3').click(function() {
+                    jQuery('#ed_details').hide();
+                    jQuery('.targetADD').hide();
+                    jQuery('#add_contact').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+                                                
+                App.init();
+
+                //            TableAdvanced.init();
+                FormEditable.init();
+                UIExtendedModals.init();
+                FormFileUpload.init();
+                UIToastr.init();
+                FormComponents.init();
+            });
+            $('.date-picker').datepicker({
+                rtl: App.isRTL(),
+                autoclose: true
+            });
+            var myApp;
+            myApp = myApp || (function() {
+                var pleaseWaitDiv = $('<div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h3>Processing...</h3></div><div class="modal-body"><div class="progress progress-striped active"><div class="progress-bar progress-bar-success" style="width: 100%;"></div></div></div></div></div></div>');
+                return {
+                    showPleaseWait: function() {
+                        pleaseWaitDiv.modal();
+                    },
+                    hidePleaseWait: function() {
+                        pleaseWaitDiv.modal('hide');
+                    }
+                };
+            })();
+            var searchCustomer = document.getElementById("id_searchText");
+            searchCustomer.addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {
+                    showCustomers();
+                }
+            });
+        </script>
+        <!-- END JAVASCRIPTS -->
+    </body>
+    <!-- END BODY -->
+</html>

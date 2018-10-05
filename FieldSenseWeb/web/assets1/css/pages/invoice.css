@@ -1,0 +1,88 @@
+/***
+Invoice page
+***/
+.invoice table {
+   margin: 15px 0 0px;
+}
+
+.invoice table thead{
+	background-color: #eee;
+}
+.invoice .invoice-logo {
+  margin-bottom:20px;
+}
+#ledger .invoice-logo {
+  margin-bottom:0px;
+}
+
+.invoice .invoice-logo p {
+  padding:5px 0;
+  font-size:26px;
+  line-height:28px;
+  text-align:center;
+}
+#ledger .invoice-logo p {
+  padding:5px 0;
+  font-size:26px;
+  line-height:28px;
+  text-align:left;
+}
+
+.invoice .invoice-logo p span {
+  display:block;
+  font-size:14px;
+}
+
+.invoice .invoice-logo-space {
+  margin-bottom:15px;
+}
+
+.invoice .invoice-payment strong {
+  margin-right:5px;
+}
+
+.invoice .invoice-block {
+  text-align:right;
+}
+
+.invoice .invoice-block .amounts {
+  margin-top: 20px;
+  font-size: 14px;
+}
+#printThis h5,
+.table p{
+	font-weight: bold !important;
+}
+#printThis .table>tbody>tr>td{
+	vertical-align: top;
+}
+#printThis .table>tbody>tr:nth-child(3)>td{
+	vertical-align: bottom;
+}
+#printThis .table>thead>tr>th:nth-child(3),
+#printThis .table>tbody>tr>td:nth-child(3){
+	text-align:right;
+}
+#printThis .table>thead>tr>th:nth-child(1),
+#printThis .table>thead>tr>th:nth-child(2),
+#printThis .table>tbody>tr>td:nth-child(2){
+	text-align:center;
+}
+#printThis address {
+  margin-bottom: 0px !important;
+}
+#printThis .table>thead>tr>th, #printThis .table>tbody>tr>th, #printThis .table>tfoot>tr>th, #printThis .table>thead>tr>td, #printThis .table>tbody>tr>td, #printThis .table>tfoot>tr>td{padding: 4px;}
+
+.table-bordered>tbody>tr>td.b{
+	font-weight:bold;
+
+}
+
+tr.total{
+	font-weight:bold;
+	background-color:#eeeeee;
+	text-align:right;
+}
+tr.ledge{
+	background-color:#f9f9f9;
+}

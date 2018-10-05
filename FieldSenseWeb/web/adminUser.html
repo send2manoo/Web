@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>FieldSense</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta name="MobileOptimized" content="320">
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+        <link href="assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet"/>
+        <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet"/>
+        <!-- Changes for mozila browser commented
+        <link href="assets/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css"/>
+                <link href="assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>-->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datepicker/css/datepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css"/>
+        <!-- BEGIN TITLE DROPDOWN STYLES -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/clockface-1.0.1/css/clockface.css"/> <!--Added by jyoti -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2_conquer.css"/>
+        <!-- BEGIN TITLE DROPDOWN STYLES -->
+
+        <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-toastr/toastr.min.css"/>
+        <!-- END PAGE LEVEL PLUGIN STYLES -->
+        <!-- BEGIN THEME STYLES -->
+        <link href="assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+	<!-- JQUERY TREE GRID -->	
+	<link rel="stylesheet" href="assets/plugins/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+        <!-- END THEME STYLES -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+        <link rel="stylesheet" href="assets/css/bootstrap-select.min.css"> <!-- added by manohar-->
+         <script type="text/javascript">
+            var clevertap = {event: [], profile: [], account: [], onUserLogin: [], notifications: []};
+            // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+            clevertap.account.push({"id": "W6K-957-5W5Z"});
+            (function () {
+                var wzrk = document.createElement('script');
+                wzrk.type = 'text/javascript';
+                wzrk.async = true;
+                wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wzrk, s);
+            })();
+        </script>
+    </head>
+    <!-- END HEAD -->
+    <!-- BEGIN BODY -->
+    <body class="page-header-fixed page-footer-fixed page-sidebar-fixed">
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-inverse navbar-fixed-top">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="header-inner">
+                <!-- BEGIN LOGO -->
+                <a class="navbar-brand" href="adminUser.html">
+                    <img src="assets/img/logo.png" alt="logo" class="img-responsive"/>
+                </a>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <img src="assets/img/menu-toggler.png" alt=""/>
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul id="top_tabs" class="nav navbar-nav pull-left">
+                    <li class="active">
+                        <a href="adminUser.html">Users</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="orgChart.html">Reporting Structure</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="adminCustomer.html">Customers</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="masterData.html">Master Data</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="adminForms.html">Forms</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="adminReports.html">Reports</a>
+                    </li>
+                </ul>		
+
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" id="id_usaerImage">
+
+                        </a>
+                        <ul class="dropdown-menu" id="id_loginuser">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar-wrapper">
+                    <div class="page-sidebar navbar-collapse collapse">
+                        <!-- BEGIN SIDEBAR MENU -->
+                        <span id="id_leftMenuUser">
+
+                        </span>
+                        <!-- END SIDEBAR MENU -->
+                    </div>
+                </div>
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content-wrapper">
+                    <div class="page-content">
+                        <!-- BEGIN PAGE CONTENT-->
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-12">
+                                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+                                <div class="portlet-body">	
+                                    <div class="search">
+                                        <input type="text" aria-controls="sample_3" class="form-control input-large" placeholder="Search" id="id_searchUser">
+                                        <div class="actions">
+                                            <a data-toggle="modal" href="#" class="btn btn-info" onclick="showUser()"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-info" style="float:right;" data-toggle="modal" href="#responsive" onclick="addUserTemplate();"><i class="fa fa-plus"></i> Add Users</button>
+                                    <button type="button" class="btn btn-info fr" style="margin-right:5px;" onclick="window.location = 'adminImportUser.html';"><i class="fa fa-download"></i> Import Users</button>
+
+                                    <span id="id_userShow">
+
+                                    </span>
+                                </div>
+
+                                <!-- END EXAMPLE TABLE PORTLET-->							
+                            </div>
+                        </div>	
+
+                        <!-- View User Details-->
+                        <!--<div id="responsive1" class="modal fade" tabindex="-1" data-width="760">-->
+                        <div id="responsive1" class="modal fade" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-wide">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                        <h4 class="modal-title">User Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span id="id_viewUserDisplay"></span>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-dismiss="modal" onclick="clearAddUser()" class="btn btn-default">Close</button>
+                                    </div>								
+                                </div>	
+                            </div>	
+                        </div>	
+                        <!-- View User Details-->			
+
+
+                        <!-- Add User Details-->
+                        <!--                        <div id="responsive" class="modal fade cls_user" tabindex="-1" data-width="760">-->
+                        <div id="responsive" class="modal fade cls_user" tabindex="-1" role="basic" aria-hidden="true">
+                           <!-- <div class="modal-dialog modal-wide">
+                                <div class="modal-content">	
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"  aria-hidden="true"></button>
+                                        <h4 class="modal-title">Add User Details</h4>
+                                    </div>
+                                    <form class="form-horizontal form-row-seperated" role="form">
+                                        <div class="modal-body" id="act1">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#tab_1_1" data-toggle="tab">General Info</a>
+							</li>
+							<li class="">
+								<a href="#tab_1_2" data-toggle="tab">Territories</a>
+							</li>
+						</ul>
+                                            <!--                                        <form class="form-horizontal" role="form">								-->
+						<!--<div class="tab-content">
+							<div class="tab-pane fade active in" id="tab_1_1">
+                                           			<div class="scroller" data-always-visible="1" data-rail-visible1="1">
+                                                			<div class="form-body">
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">First Name</label>
+                                                        				<div class="col-md-6">
+                                                           				<input type="fname" class="form-control" value="" id="id_ufnm">
+                                                      		 			</div>														
+                                                   				</div>
+								                <div class="form-group">
+								                	<label class="col-md-6 control-label">Last Name</label>
+								                	<div class="col-md-6">
+								                	<input type="lname" class="form-control" value="" id="id_ulnm">
+								                	</div>														
+								                </div>
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Designation</label>
+                                                       					<div class="col-md-6">
+                                                           				<input type="lname" class="form-control" value="" id="id_designation">
+                                                        				</div>
+                                                    				</div>
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Role</label>
+                                                        				<div class="col-md-6">
+                                                            				<select class="form-control" onchange ="showReportingHead(this.value)" id="id_role">
+                                                                			<option value="0">Select</option>
+                                                                			<option value="1" >Admin</option>
+                                                                			<option value="2" >Accounts</option>
+                                                                			<option value="5" >On-field Personnel</option>
+                                                           	 			</select>
+                                                        				</div>
+                                                    				</div>
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Report To</label>
+                                                       					<div class="col-md-6">
+                                                            				<select class="form-control" id="id_ofAllSubordinate">
+                                                               				<option value="0">Select</option>
+                                                           				</select>
+                                                       					 </div>
+                                                    				</div>
+                                                    				<div class="form-group">
+                                                       					<label class="col-md-6 control-label">Email</label>
+                                                        				<div class="col-md-6">
+                                                            				<input type="email" class="form-control" value="" id="id_uemail">
+                                                       					</div>
+                                                   				 </div>
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Password</label>
+                                                        				<div class="col-md-6">
+                                                            				<input type="password" class="form-control" value="" id="id_upass">
+                                                        				</div>
+                                                    				</div>
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Confirm Password</label>
+                                                        				<div class="col-md-6">
+                                                            				<input type="password" class="form-control" value="" id="id_ucpass">
+                                                        				</div>
+                                                    				</div>	
+                                                   				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Mobile No.</label>
+                                                        				<div class="col-md-6" id="mob">
+                                                            				<input name="id_cls_mobile_name" class="form-control" id="mask_phone" type="text" value=""/>
+                                                        				</div>														
+                                                    				</div>	
+                                                    
+<!--                                                      			<div class="form-group">
+                                                       					<label class="col-md-6 control-label">Accuracy (In Meters)</label>
+                                                        				<div class="col-md-6" id="accuracy">
+                                                            				<input name="id_cls_accuray" class="form-control" id="mask_accuracy" type="text" value=""/>
+                                                        				</div>														
+                                                    				</div>-->
+                                                    
+<!--                                                      			<div class="form-group">
+                                                       					<label class="col-md-6 control-label">Check-In Radius (In Meters)</label>
+                                                        				<div class="col-md-6" id="check_in_radius">
+                                                            				<input name="id_cls_check_in_radius" class="form-control" id="mask_check_in_radius" type="text" value=""/>
+                                                        				</div>														
+                                                    				</div>-->
+
+                                                    				<!--<div class="form-group" id="add_user_accuracy_div">    
+                                                        				<label class="col-md-6 control-label">Accuracy (In Meters)</label>
+                                                        				<div class="col-md-6">
+                                                                				<select class="form-control" id="id_cls_accuray">
+                                                                       				<option value=50>50</option>
+                                                                        			<option value=100>100</option>
+                                                                        			<option value=250>250</option>
+                                                                        			<option value=500 selected>500</option>
+                                                                        			<option value=1000>1000</option>
+                                                                        			<option value=2500>2500</option>
+                                                                        			<option value=5000>5000</option>                                                                                                
+                                                                				</select>
+                                                        				</div>
+                                                    				</div>	
+                                                    
+                                                   				<div class="form-group" id="add_check_in_radius_div">
+                                                        				<label class="col-md-6 control-label">Check-In Radius (In Meters)</label>
+                                                       					<div class="col-md-6">
+                                                                				<select class="form-control" id="id_cls_check_in_radius">
+                                                                        			<option value=50>50</option>
+						                                                <option value=100>100</option>
+						                                                <option value=250>250</option>
+						                                                <option value=500 selected>500</option>
+						                                                <option value=1000>1000</option>
+						                                                <option value=2500>2500</option>
+						                                                <option value=5000>5000</option>                                                                                                
+                                                                				</select>
+                                                        				</div>
+                                                    				</div>	
+
+                                                    
+                                                    
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Gender</label>
+                                                        				<div class="col-md-6">
+                                                            					<div class="radio-list">
+                                                                					<label class="radio-inline">
+                                                                    						<input type="radio" name="optionsRadios" id="optionsRadios4" value="option1" class="cls_ugmale" > Male </label>
+                                                                					<label class="radio-inline">
+                                                                    						<input type="radio" name="optionsRadios" id="optionsRadios5" value="option2" class="cls_ugfemale"> Female </label>
+                                                            					</div>
+                                                        				</div>														
+                                                    				</div>	
+                                                    				<div class="form-group">
+                                                       					<label class="col-md-6 control-label">Active</label>
+                                                       			 		<div class="col-md-6">
+                                                            					<div class="checkbox-list">
+                                                                					<input type="checkbox" id="id_uact">
+                                                            					</div>
+                                                        				</div>														
+                                                    				</div>	
+                                                  	
+						    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Allow Timeout</label>
+                                                        				<div class="col-md-6">
+                                                            					<div class="checkbox-list">
+                                                                					<input type="checkbox" id="id_allowtimeout">
+                                                           					</div>
+                                                        				</div>														
+                                                   				</div>
+
+                                                    				<div class="form-group">
+                                                        				<label class="col-md-6 control-label">Notification</label>
+                                                        				<div class="col-md-6">
+                                                            					<div class="checkbox-list">
+                                                               						<input type="checkbox" id="id_notification_email"   disabled/> <label class="control-label" style="margin-left: 30px;margin-top: -25px!important">Email</label>
+                                                                					<input type="checkbox" id="id_notification_mobile"  /> <label class="control-label" style="margin-left: 30px;margin-top: -25px!important">Mobile</label>
+                                                            					</div>
+                                                        				</div>
+                                                    				</div>
+                                                			</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="tab_1_2">
+								<!-- Insert Territories here -->
+								<!--<div id="add_territorytree"></div>		
+									<!-- Insert Territories here -->											
+								<!--</div>
+                                            		</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info" onclick="addUser()">Save</button>
+                                            <button type="button" data-dismiss="modal" class="btn btn-default" onclick="clearAddUser()">Cancel</button>
+                                        </div>								
+                                    </form>
+                                </div>								
+                            </div>	-->							
+                        </div>	
+                        <!-- Edit User Details-->
+                        <div id="responsive2" class="modal fade cls_editUser" tabindex="-1" role="basic" aria-hidden="true">
+                        </div>	
+                        <!-- Edit User Details-->
+                        <!-- END PAGE CONTENT-->
+                    </div>
+                </div>
+            </div>
+            <!-- Loading-->
+
+            <div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Processing...</h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="progress progress-striped active">
+
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="40" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">
+                                        40% Complete (success)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+            <!-- Loading-->
+            <!-- END CONTENT -->
+        </div>
+
+        <!-- END CONTAINER -->
+        <div id="responsivechangepwd" class="modal fade cls_changePassword" tabindex="-1" role="basic" aria-hidden="true">
+        </div>
+        <div id="feedback" class="modal fade cls_userfeedback" tabindex="-1" role="basic" aria-hidden="true"></div>
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            <div class="footer-inner">
+                2012 - 2017 &copy; QuantumLink Communications. All Rights Reserved.
+            </div>
+            <div class="footer-tools">
+                <span class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </span>
+            </div>
+        </div>
+
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.min.js"></script>
+        <script src="assets/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <!-- BEGIN TITLE DROPDOWN CORE PLUGINS -->
+        <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <!-- END TITLE DROPDOWN CORE PLUGINS -->
+
+
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/plugins/clockface-1.0.1/js/clockface.js"></script>
+        <!-- BEGIN TITLE DROPDOWN PLUGINS -->
+        <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>        
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+        <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+        <!-- END TITLE DROPDOWN PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+        <!-- END PAGE LEVEL PLUGINS-->
+        <!-- BEGIN:File Upload Plugin JS files-->
+        <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+        <!-- The Templates plugin is included to render the upload/download listings -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js"></script>
+        <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/load-image.min.js"></script>
+        <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+        <script src="assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js"></script>
+        <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+        <!-- The basic File Upload plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload.js"></script>
+        <!-- The File Upload processing plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+        <!-- The File Upload image preview & resize plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-image.js"></script>
+        <!-- The File Upload audio preview plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-audio.js"></script>
+        <!-- The File Upload video preview plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-video.js"></script>
+        <!-- The File Upload validation plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+        <!-- The File Upload user interface plugin -->
+        <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+        <!-- The main application script -->
+        <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
+        <!--[if (gte IE 8)&(lt IE 10)]>
+        <script src="assets/plugins/jquery-file-upload/js/cors/jquery.xdr-transport.js"></script>
+        <![endif]-->
+        <!-- END:File Upload Plugin JS files-->
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="assets/scripts/app.js" type="text/javascript"></script>
+        <script src="assets/scripts/table-advanced.js"></script>
+        <script src="assets/scripts/ui-extended-modals.js"></script>
+        <script src="assets/scripts/form-components.js"></script>
+        <!--        <script src="assets/scripts/form-fileuploadUser.js"></script>-->
+        <script src="assets/scripts/form-components.js"></script>
+        <script src="assets/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/ui-toastr.js" type="text/javascript"></script>
+	<!--Confirm modal-->
+     	<script src="assets/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+
+	<!-- JQUERY TREE GRID -->
+	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxcore.js"></script>
+   	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdata.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxdatatable.js"></script>
+    	<script type="text/javascript" src="assets/plugins/jqwidgets/jqwidgets/jqxtreegrid.js"></script>
+
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <script src="FieldSenseJS/FieldSenseCommonMethods.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/FieldSenseUtils.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/adminUser.js" type="text/javascript"></script>
+	<script src="assets/dist/js/bootstrap-select.min.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+
+                jQuery('.showSingle').click(function () {
+                    jQuery('.targetDTL').hide();
+                    jQuery('#cdetails').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+                jQuery('.showSingle2').click(function () {
+                    jQuery('.targetEDT').hide();
+                    jQuery('#ed_details').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+                jQuery('.showSingle3').click(function () {
+                    jQuery('#ed_details').hide();
+                    jQuery('.targetADD').hide();
+                    jQuery('#add_contact').show();
+                    jQuery('#div' + $(this).attr('target')).show();
+                });
+
+                App.init();
+                //                TableAdvanced.init();
+                UIExtendedModals.init();
+                FormFileUpload.init();
+                UIToastr.init();
+                FormComponents.init();
+            });
+            var myApp;
+            myApp = myApp || (function () {
+                var pleaseWaitDiv = $('<div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h3>Processing...</h3></div><div class="modal-body"><div class="progress progress-striped active"><div class="progress-bar progress-bar-success" style="width: 100%;"></div></div></div></div></div></div>');
+                return {
+                    showPleaseWait: function () {
+                        pleaseWaitDiv.modal();
+                    },
+                    hidePleaseWait: function () {
+                        pleaseWaitDiv.modal('hide');
+                    }
+                };
+            })();
+            var searchUserEnter = document.getElementById("id_searchUser");
+            searchUserEnter.addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {
+                    showUser();
+                }
+            });
+
+        </script>
+        <!-- END JAVASCRIPTS -->
+    </body>
+    <!-- END BODY -->
+</html>

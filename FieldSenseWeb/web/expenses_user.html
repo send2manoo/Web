@@ -1,0 +1,636 @@
+<!--
+@Added by jyoti, 02-2018
+-->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>FieldSense</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta name="MobileOptimized" content="320">
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2_conquer.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datepicker/css/datepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-timepicker/compiled/timepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css"/>
+        <!-- END PAGE LEVEL STYLES -->
+        <!-- BEGIN THEME STYLES -->
+        <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+        <link href="assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style-responsive_adm.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/pages/about-us.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/dist/css/bootstrap-imageupload.css" rel="stylesheet">
+        <!-- END THEME STYLES -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-toastr/toastr.min.css"/>
+        <link rel="shortcut icon" href="assets/img/fs.ico"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css"/>
+
+        <!--        <style>
+                    #approve_btn {
+                        position:absolute;
+                    }
+                    #reject_btn {
+                        position : absolute;
+                        left : 106px;
+                    }
+                    </style>-->
+
+        <script type="text/javascript">
+            var clevertap = {event: [], profile: [], account: [], onUserLogin: [], notifications: []};
+            // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+            clevertap.account.push({"id": "W6K-957-5W5Z"});
+            (function () {
+                var wzrk = document.createElement('script');
+                wzrk.type = 'text/javascript';
+                wzrk.async = true;
+                wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wzrk, s);
+            })();
+        </script>
+    </head>
+    <!-- END HEAD -->
+    <!-- BEGIN BODY -->
+    <body class="page-header-fixed page-footer-fixed page-sidebar-fixed">
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-inverse navbar-fixed-top">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="header-inner">
+                <!-- BEGIN LOGO -->
+                <a class="navbar-brand" href="dashboard.html">
+                    <img src="assets/img/logo.png" alt="logo" class="img-responsive"/>
+                </a>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <img src="assets/img/menu-toggler.png" alt=""/>
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul id="top_tabs" class="nav navbar-nav pull-left">
+                    <li class="inactive">
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="index.html">My Team</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Expenses</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="customers.html">Customers</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="messages.html">Messages</a>
+                    </li>
+                    <li class="inactive">
+                        <a href="customform.html">Forms</a>
+                    </li>	
+                    <li class="inactive">
+                        <a href="reports.html">Reports</a>
+                    </li>
+                </ul>		
+
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" id="id_usaerImage">
+                        </a>
+                        <ul class="dropdown-menu" id="id_loginuser">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->		
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar-wrapper">
+                    <div class="page-sidebar navbar-collapse collapse">
+                        <!-- BEGIN SIDEBAR MENU -->
+
+                        <!-- END SIDEBAR MENU -->
+                    </div>
+                </div>
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content-wrapper">
+                    <div class="page-content">
+                        <!-- BEGIN PAGE CONTENT-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portlet">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            Filters
+                                        </div>						
+                                        <div class="tools">
+                                            <a href="javascript:;" class="collapse"></a>
+                                        </div>						
+                                    </div>
+                                    <div class="portlet-body">
+                                        <!-- BEGIN FORM-->
+                                        <form action="#" class="form-horizontal">
+                                            <div class="form-body">												
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">User</label>
+                                                            <div class="col-md-4">
+                                                                <select class="form-control input-large select2me" id="all_users_exp" data-placeholder="Select...">
+                                                                    <option value=""></option>
+                                                                    <option value="All" selected>All Users</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Status</label>
+                                                            <div class="col-md-9">
+                                                                <select class="form-control input-large" data-placeholder="Select..."  id="exp_status">
+                                                                    <option value="All">All</option>
+                                                                    <option value="0" selected>Pending Approval by Reporting Head</option>
+                                                                    <option value="1" >Pending Approval by Accounts</option>
+                                                                    <option value="3">Approved</option>
+                                                                    <option value="2">Rejected by Reporting Head</option>
+                                                                    <option value="4">Rejected by Accounts</option>
+                                                                    <option value="5">Disbursed</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Expense Category</label>
+                                                            <div class="col-md-4">
+                                                                <select class="form-control input-large" id="all_exp_cat" data-placeholder="Select...">
+                                                                    <option value="All" selected>All</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Date</label>
+                                                            <div class="col-md-9">
+                                                                <div id="reportrange" class="form-control input-large btn btn-default">
+                                                                    <i class="fa fa-calendar tooltips" data-placement="bottom" data-original-title="Calendar"></i>
+                                                                    &nbsp;
+                                                                    <span>
+                                                                    </span>
+                                                                    <!--                                                                    &nbsp;&nbsp;														
+                                                                                                                                        <b class="fa fa-angle-down"></b>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!-- END FORM-->						
+                                        <div class="form-actions nobg">
+                                            <button type="submit" class="btn btn-primary" onclick="getAllExpenses();"><i class="fa fa-eye"></i> View</button>
+                                            <button type="button" class="btn btn-default" onclick="getAllExpenses('clear');">Clear</button>						
+                                        </div>							
+                                    </div>
+                                </div>				
+                                <!-- BEGIN PORTLET-->				
+
+                                <!-- BEGIN FILTER -->
+                                <div class="portlet">
+                                    <div class="portlet-body">
+                                        <div id='btnApprovepo' style="display:none">
+                                            <button type="button" id="approve_btn" class="btn btn-success btn tooltips" data-toggle="modal" href="#basic" data-placement="bottom" data-original-title="Approve" ><strong>Approve</strong></button>
+                                            <button type="button" id="reject_btn" class="btn btn-danger btn tooltips" data-toggle="modal" href="#reject" data-placement="bottom" data-original-title="Reject" onclick="clearReason();" ><strong>Reject</strong></button>
+                                        </div>
+
+                                        <button type="button" class="btn btn-info" style="float:right;" data-toggle="modal" href="#id_addNewExpense" onclick="addNewExpenseTemplate();"><i class="fa fa-plus"></i> Add Expense</button>
+                                        <!--<button type="button" class="btn btn-info fr" data-toggle="modal" href="#addExpenses"><i class="fa fa-plus"></i> Add Expense</button>-->
+
+                                        <div class="row">
+
+                                            <div class="col-md-12" id="expenses_table">
+
+                                                <table id="example" class="table table-striped table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-checkbox">
+                                                                <input type="checkbox" id="draft" class="group-checkable" onclick="selectAllCheck();" data-set="#example1 .checkboxes"/>
+                                                            </th>
+                                                            <th>
+                                                                User Name
+                                                            </th>								
+                                                            <th>
+                                                                Expense Head
+                                                            </th>
+                                                            <th>
+                                                                Expense Category
+                                                            </th>
+                                                            <th>
+                                                                Amount (<i class="fa fa-inr fa-fw" aria-hidden="true"></i>)
+                                                            </th>
+                                                            <th>
+                                                                Expense Date
+                                                            </th>
+                                                            <th>
+                                                                Customer
+                                                            </th>
+                                                            <th>
+                                                                Status
+                                                            </th>
+                                                            <th>
+                                                                <!--                                                                <div id='btnApprovepo' style="display:none">
+                                                                                                                                    <button type="button" class="btn btn-success btn-xs tooltips" data-toggle="modal" href="#basic" data-placement="bottom" data-original-title="Approve"><i class="fa fa-thumbs-up"></i></button>
+                                                                                                                                    <button type="button" class="btn btn-danger btn-xs tooltips" data-toggle="modal" href="#reject" data-placement="bottom" data-original-title="Reject" onclick="clearReason();"><i class="fa fa-thumbs-up fa-flip-vertical"></i></button>
+                                                                                                                                </div>									-->
+                                                            </th>				
+                                                        </tr>
+                                                    </thead>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th colspan="4" style="text-align:right">Total:</th>
+                                                            <th colspan="5" id="total_expenses"></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                    <tbody>                                                      
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div></div>	
+                                <!-- END FILTER -->
+                            </div>
+                        </div>
+                        <!-- END PAGE CONTENT-->
+                        <!-- BEGIN Expenses -->
+                        <div id="expenses" data-backdrop="static"  class="modal fade" tabindex="-1" role="basic" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">								
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                        <h4 class="modal-title">Expenses Details - Nayan Shah</h4>
+                                    </div>
+                                    <form action="#" class="form-horizontal" name="expenses_form" id="expenses_form">
+                                        <div class="modal-body">
+                                            <div class="scroller" data-always-visible="1" data-rail-visible1="1">
+                                                <div class="form-body" id="expense_details">                                                   
+                                                </div>					
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer" id="exp_footer">
+                                            <!--<button type="button" data-dismiss="modal" class="btn btn-info" tabindex="16">Save</button>
+                                            <button type="button" data-dismiss="modal" class="btn btn-default" tabindex="17">Close</button>-->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Approve multiple expenses -->
+                        <div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                        <h4 class="modal-title">Approve Expenses</h4>
+                                    </div>						
+                                    <div class="modal-body">
+                                        Are you sure you want to approve all selected expenses?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-info" onclick="approveAllExpense();">Confirm</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+
+                        <!-- BEGIN Reject -->
+                        <!-- Reject multiple expenses -->
+                        <div id="reject" class="modal fade" tabindex="-1" role="basic" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">								
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                        <h4 class="modal-title">Reject Expenses</h4>
+                                    </div>
+                                    <form action="#" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 form-group">
+                                                        <label class="col-md-4 control-label">Reason for Reject</label>
+                                                        <div class="col-md-8">
+                                                            <textarea type="name" id="reason_text" class="form-control" value="" style="resize: none;"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="alert alert-danger">
+                                                    The above reason will apply to all the expenses you have selected.
+                                                </div>						
+                                            </div>					
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info"  onclick="rejectAllExpense();">Confirm</button>					
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Reject -->
+
+                        <!-- BEGIN Add Expenses -->
+
+                        <div id="id_addNewExpense" data-backdrop="static" class="modal fade cls_expense" tabindex="-1" role="dialog" aria-hidden="true">
+                            <!--                            <div class="modal-dialog modal-wide">
+                                                            <div class="modal-content">								
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                                    <h4 class="modal-title">Add Expense</h4>
+                                                                </div>
+                                                                <form action="#" class="form-horizontal form-row-seperated">					
+                                                                    <div class="modal-body">
+                                                                        <div class="scroller" data-always-visible="1" data-rail-visible1="1">
+                                                                            <div class="form-body">
+                                                                                <div class="form-group">						
+                                                                                    <label class="col-md-4 control-label">Customer Name</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="name" class="form-control" Value="ABC Corporation" tabindex="1" >
+                                                                                    </div>
+                                                                                </div>
+                            
+                                                                                <div class="form-group">
+                                                                                    <label class="col-md-4 control-label">Visit</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="name" class="form-control" Value="" tabindex="2" >
+                                                                                    </div>
+                                                                                </div>
+                            
+                                                                                <div class="form-group">
+                                                                                    <label class="col-md-4 control-label">Date & Time</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <div class="input-group date form_datetime">
+                                                                                            <input type="text" size="16" readonly class="form-control">
+                                                                                            <span class="input-group-btn">
+                                                                                                <button class="btn btn-primary date-set" type="button"><i class="fa fa-calendar"></i></button>
+                                                                                            </span>
+                                                                                        </div>										
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">						
+                                                                                    <label class="col-md-4 control-label">Expense Head</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="name" class="form-control" Value="" tabindex="4" >
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">						
+                                                                                    <label class="col-md-4 control-label">Expense Category</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <select name="country" id="country_list" class="form-control">
+                                                                                            <option value="1">Travelling</option>
+                                                                                            <option value="2">Food</option>
+                                                                                            <option value="3">Stay</option>
+                                                                                            <option value="4">Fuel/Mileage</option>
+                                                                                            <option value="5">Lodging</option>
+                                                                                            <option value="6">Telephone</option>
+                                                                                            <option value="7">Other</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>								
+                                                                                <div class="form-group">
+                                                                                    <label class="col-md-4 control-label">Amount Claimed </label>
+                                                                                    <div class="col-md-8">	
+                                                                                        <div class="input-group">
+                                                                                            <input type="text" value="" class="form-control amt" name="text" placeholder="00.00" tabindex="5">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>						
+                            
+                            
+                            
+                                                                                <div class="form-group">
+                                                                                    <label class="col-md-4 control-label">Attach Receipt</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <div class="imageupload">
+                                                                                            <div class="file-tab ">
+                                                                                                <label class="btn btn-default btn-file">
+                                                                                                    <span>Browse</span>
+                                                                                                     The file is stored here. 
+                                                                                                    <input type="file" name="image-file">
+                                                                                                </label>
+                                                                                                <button type="button" class="btn btn-default">Remove</button>
+                                                                                            </div>
+                                                                                        </div>	
+                                                                                    </div>
+                                                                                </div>
+                            
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-info" tabindex="6">Submit</button>
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-default" tabindex="7">Cancel</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>-->
+                        </div>
+                        <!-- END Add Expenses -->	
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading-->
+
+            <div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Processing...</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="40" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">
+                                        40% Complete (success)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+            <!-- Loading-->
+
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <div id="responsivechangepwd" class="modal fade cls_changePassword" tabindex="-1" role="basic" aria-hidden="true"></div>
+        <div id="feedback" class="modal fade cls_userfeedback" tabindex="-1" role="basic" aria-hidden="true"></div>
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            <div class="footer-inner">
+                2012 - 2017 © QuantumLink Communications. All Rights Reserved.
+            </div>
+            <div class="footer-tools">
+                <span class="go-top">
+                    <i class="fa fa-angle-left"></i>
+                </span>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.min.js"></script>
+        <script src="assets/plugins/excanvas.min.js"></script> 
+        <![endif]-->
+        <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/data-tables/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>        
+        <!-- END CORE PLUGINS -->
+        <!-- AUTOFILL PLUGINS -->
+        <script type="text/javascript" src="assets/plugins/autocomplete/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/autocomplete/autocomplete.js"></script>
+
+        <!--Calendar Scripts -->
+        <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery.input-ip-address-control-1.0.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>
+        <!--end Calendar Scripts --> 
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+        <script src="assets/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/ui-toastr.js" type="text/javascript"></script>
+        <script src="assets/dist/js/bootstrap-imageupload.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+        <!--Confirm modal-->
+        <script src="assets/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="assets/scripts/app.js" type="text/javascript"></script>
+        <script src="assets/scripts/table-managed.js"></script>
+        <script src="assets/scripts/form-components.js"></script>
+        <script src="FieldSenseJS/FieldSenseCommonMethods.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/FieldSenseUtils.js" type="text/javascript"></script>
+        <script src="FieldSenseJS/expenses_user.js" type="text/javascript"></script>
+
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <script>
+                                                jQuery(document).ready(function () {
+                                                    App.init();
+                                                    TableManaged.init();
+                                                    UIToastr.init();
+                                                    FormComponents.init();
+                                                });
+
+                                                $('#reportrange').daterangepicker(
+                                                        {
+                                                            ranges: {
+                                                                'Today': [moment(), moment()],
+                                                                'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                                                                'Last 7 Days': [moment().subtract('days', 6), moment()],
+                                                                'Last 30 Days': [moment().subtract('days', 29), moment()],
+                                                                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                                'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                                                            },
+                                                            startDate: moment()
+                                                        },
+                                                function (start, end) {
+
+                                                    $('#reportrange span').html(start.format('D MMM YYYY') + ' - ' + end.format('D MMM YYYY'));
+                                                }
+                                                );
+                                                //Set the initial state of the picker label
+                                                $('#reportrange span').html(moment().subtract('days', 29).format('D MMM YYYY') + ' - ' + moment().format('D MMM YYYY'));
+
+                                                /*Expense count
+                                                 $("#draft").click(function(){
+                                                 if($(this).is(':checked')){
+                                                 $('#btnApprovepo').show();
+                                                 }
+                                                 else
+                                                 {
+                                                 $('#btnApprovepo').hide();
+                                                 }
+                                                 }); 
+                                                 */
+
+                                                /*Showing row count*/
+                                                $.extend(true, $.fn.dataTable.defaults, {
+                                                    "sDom": "<'row'<'col-md-12 col-sm-12'f>r><'table-scrollable't><'row'<'col-md-4 col-sm-12'l><'col-md-4 col-sm-12'i><'col-md-4 col-sm-12'p>>",
+                                                });
+
+                                                var $imageupload = $('.imageupload');
+                                                $imageupload.imageupload();
+
+                                                $('#imageupload-disable').on('click', function () {
+                                                    $imageupload.imageupload('disable');
+                                                    $(this).blur();
+                                                })
+
+                                                $('#imageupload-enable').on('click', function () {
+                                                    $imageupload.imageupload('enable');
+                                                    $(this).blur();
+                                                })
+
+                                                $('#imageupload-reset').on('click', function () {
+                                                    $imageupload.imageupload('reset');
+                                                    $(this).blur();
+                                                });
+        </script>
+
+        <!-- END JAVASCRIPTS -->
+    </body>
+    <!-- END BODY -->
+</html>

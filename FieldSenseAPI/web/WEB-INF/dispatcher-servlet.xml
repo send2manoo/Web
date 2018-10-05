@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+    <!-- nikhil -->
+    <!--        <context:annotation-config/>-->
+    
+    <!-- nikhil -->
+    
+    
+    <context:component-scan base-package="com.qlc.fieldsense.rest" />
+    <context:component-scan base-package="com.qlc.fieldsense.accounts.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.customer.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.auth.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.customerContact.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.user.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.appointments.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.expense.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.userKey.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.usersTravelLogs.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.team.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.notes.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.attendance.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.travels.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.message.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.activity.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.activityPurpose.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.search.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.activityOutcome.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.mobile.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.password.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.report.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.report.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.expenseCategory.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.feedback.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.stats.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.formbuilder.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.territoryCategory.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.industryCategory.service" />
+    <context:component-scan base-package="com.qlc.cacheLocation.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.predefinedList.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.customerOffline.service" />
+    <context:component-scan base-package="com.qlc.fieldsense.external.service" /> <!-- added by jyoti, 18-apr-2018 -->
+    <context:component-scan base-package="com.qlc.fieldsense.dashboard.service" />
+    <mvc:annotation-driven />
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter"/>
+                <ref bean="jsonConverter" />
+                <!--                <ref bean="marshallingConverter" />
+                <ref bean="atomConverter" />-->
+            </list>
+        </property>
+    </bean>
+      
+    <bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes" value="application/json" />
+    </bean>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+</beans>

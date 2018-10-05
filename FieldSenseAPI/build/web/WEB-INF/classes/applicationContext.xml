@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : applicationContext.xml
+    Created on : January 22, 2014, 12:02 PM
+    Author     : Ramesh 
+    Description:
+        Purpose of the document follows.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">    
+    <bean id="applicationProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+
+    <!--local server path-->
+    <!--<property name="location" value="file:/usr/local/tomcat-nikhil/bin/fieldSenseConfig.properties"/>-->
+    <!--<property name="location" value="file:/home/jyoti/Installation-Files/apache-tomcat-8.0.27/bin/fieldSenseConfig.properties"/>-->
+    <!--<property name="location" value="file:/home/sanchita/apache-tomcat-8.0.27/bin/fieldSenseConfig.properties"/>-->
+
+    <!--test server path-->
+    <!--<property name="location" value="file:/usr/local/tomcat8/bin/fieldSenseConfig.properties"/>-->
+    
+    <!--live server path-->
+    <property name="location" value="file:/usr/local/apache-tomcat-8.0.27/bin/fieldSenseConfig.properties"/>
+    
+    </bean>
+    <bean id="dataSource"  class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="${DATA_BASE_CONNECTION_URL_FIELDSENSE}"/>
+        <property name="user" value="${DEFAULT_COMMUNITY_DB_USERNAME}"/>
+        <property name="password" value="${DEFAULT_COMMUNITY_DB_PASSWORD}"/>
+        <property name="initialPoolSize" value="${FIELDSENSE_INITIAL_POOL_SIZE}" />
+        <property name="minPoolSize" value="${FIELDSENSE_MIN_POOL_SIZE}" />
+        <property name="idleConnectionTestPeriod" value="${FIELDSENSE_IDLE_CONNECTION_TEST_PERIOD}" />
+        <property name="maxPoolSize" value="${FIELDSENSE_MAX_POOL_SIZE}"/>  
+        <property name="testConnectionOnCheckin" value="${FIELDSENSE_TEST_CONNECTION_ON_CHECK_IN}"/>
+        <property name="maxConnectionAge" value="${FIELDSENSE_MAX_CONNECTION_AGE}"/><!--value = 4 * 60 * 60=14400-->
+        <property name="maxIdleTimeExcessConnections" value="${FIELDSENSE_MAX_IDEAL_TIME_EXCESS_CONNECTIONS}"/><!--value = 60 * 60=3600-->
+        <property name="loginTimeout" value="${FIELDSENSE_LOGIN_TIMEOUT}"/>
+        <property name="acquireIncrement" value="${FIELDSENSE_ACQUIRE_INCREMENT}"/>
+        <property name="maxIdleTime" value="${FIELDSENSE_MAX_IDEAL_TIME}"/>
+        <property name="numHelperThreads" value="${FIELDSENSE_NUM_HELPER_THREADS}"/>
+        <property name="unreturnedConnectionTimeout" value="${FIELDSENSE_UNRETURNED_CONNECTION_TIMEOUT}"/>
+    </bean>
+
+    <bean id="dataSourceStats"  class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="${DATA_BASE_CONNECTION_URL_FIELDSENSESTATS}"/>
+        <property name="user" value="${DEFAULT_COMMUNITY_DB_USERNAME}"/>
+        <property name="password" value="${DEFAULT_COMMUNITY_DB_PASSWORD}"/>
+        <property name="initialPoolSize" value="${FIELDSENSE_INITIAL_POOL_SIZE}" />
+        <property name="minPoolSize" value="${FIELDSENSE_MIN_POOL_SIZE}" />
+        <property name="idleConnectionTestPeriod" value="${FIELDSENSE_IDLE_CONNECTION_TEST_PERIOD}" />
+        <property name="maxPoolSize" value="${FIELDSENSE_MAX_POOL_SIZE}"/>
+        <property name="testConnectionOnCheckin" value="${FIELDSENSE_TEST_CONNECTION_ON_CHECK_IN}"/>
+        <property name="maxConnectionAge" value="${FIELDSENSE_MAX_CONNECTION_AGE}"/><!--value = 4 * 60 * 60=14400-->
+        <property name="maxIdleTimeExcessConnections" value="${FIELDSENSE_MAX_IDEAL_TIME_EXCESS_CONNECTIONS}"/><!--value = 60 * 60=3600-->
+        <property name="loginTimeout" value="${FIELDSENSE_LOGIN_TIMEOUT}"/>
+        <property name="acquireIncrement" value="${FIELDSENSE_ACQUIRE_INCREMENT}"/>
+        <property name="maxIdleTime" value="${FIELDSENSE_MAX_IDEAL_TIME}"/>
+        <property name="numHelperThreads" value="${FIELDSENSE_NUM_HELPER_THREADS}"/>
+        <property name="unreturnedConnectionTimeout" value="${FIELDSENSE_UNRETURNED_CONNECTION_TIMEOUT}"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+        <property name="dataSource" ref="dataSource" />
+    </bean>  
+    
+    <bean id="jdbcTemplateStats" class="org.springframework.jdbc.core.JdbcTemplate" >
+        <property name="dataSource" ref="dataSourceStats" />
+    </bean>
+        
+   <bean id="dataSourceCache"  class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="${DATA_BASE_CONNECTION_URL_CACHELOCATION}"/>
+        <property name="user" value="${DEFAULT_COMMUNITY_DB_USERNAME}"/>
+        <property name="password" value="${DEFAULT_COMMUNITY_DB_PASSWORD}"/>
+        <property name="initialPoolSize" value="${FIELDSENSE_INITIAL_POOL_SIZE}" />
+        <property name="minPoolSize" value="${FIELDSENSE_MIN_POOL_SIZE}" />
+        <property name="idleConnectionTestPeriod" value="${FIELDSENSE_IDLE_CONNECTION_TEST_PERIOD}" />
+        <property name="maxPoolSize" value="${FIELDSENSE_MAX_POOL_SIZE}"/>
+        <property name="testConnectionOnCheckin" value="${FIELDSENSE_TEST_CONNECTION_ON_CHECK_IN}"/>
+        <property name="maxConnectionAge" value="${FIELDSENSE_MAX_CONNECTION_AGE}"/><!--value = 4 * 60 * 60=14400-->
+        <property name="maxIdleTimeExcessConnections" value="${FIELDSENSE_MAX_IDEAL_TIME_EXCESS_CONNECTIONS}"/><!--value = 60 * 60=3600-->
+        <property name="loginTimeout" value="${FIELDSENSE_LOGIN_TIMEOUT}"/>
+        <property name="acquireIncrement" value="${FIELDSENSE_ACQUIRE_INCREMENT}"/>
+        <property name="maxIdleTime" value="${FIELDSENSE_MAX_IDEAL_TIME}"/>
+        <property name="numHelperThreads" value="${FIELDSENSE_NUM_HELPER_THREADS}"/>
+        <property name="unreturnedConnectionTimeout" value="${FIELDSENSE_UNRETURNED_CONNECTION_TIMEOUT}"/>
+    </bean>
+
+    <bean id="jdbcTemplateCache" class="org.springframework.jdbc.core.JdbcTemplate" >
+        <property name="dataSource" ref="dataSourceCache" />
+    </bean>
+
+    <bean id="communityDataSourceManager" class="com.qlc.fieldsense.utils.CommunityDataSourceManager" >
+        <constructor-arg index="0" ref="dataSource"/>
+        <constructor-arg index="1" value="${DATA_BASE_CONNECTION_URL}"/>
+<!--        <property name="jdbcTemplate" ref="jdbcTemplate" />-->
+    </bean>
+    <bean id="dashboardStatsDaoImpl" class="com.qlc.fieldsense.dashboard.dao.DashboardStatsDaoImpl"></bean>
+    <bean id="accountRegistrationDaoImpl" class="com.qlc.fieldsense.accounts.dao.AccountRegistrationDaoImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="userDaoImpl" class="com.qlc.fieldsense.user.dao.UserDaoImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="customerDaoImpl" class="com.qlc.fieldsense.customer.dao.CustomerDaoImpl" >
+    </bean>
+        <bean id="formDetailsDaoImpl" class="com.qlc.fieldsense.formbuilder.dao.FormDetailsDaoImpl" >
+    </bean>
+        <bean id="formFieldsDaoImpl" class="com.qlc.fieldsense.formbuilder.dao.FormFieldsDaoImpl" >
+    </bean>
+    <bean id="authenticationDaoImpl" class="com.qlc.fieldsense.auth.dao.AuthenticationDaoImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="fieldSenseUtils" class="com.qlc.fieldsense.utils.FieldSenseUtils" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="encryptDecryptManager" class="com.qlc.fieldsense.utils.EncryptDecryptManager" >
+    </bean>
+    <bean id="teamDaoImpl" class="com.qlc.fieldsense.team.dao.TeamDaoImpl" >
+    </bean>
+    <bean id="customerContactsDaoImpl" class="com.qlc.fieldsense.customerContact.dao.CustomerContactsDaoImpl" >
+    </bean>
+    <bean id="userKayDaoImpl" class="com.qlc.fieldsense.userKey.dao.UserKayDaoImpl" >
+    </bean>
+    <bean id="appointmentDaoImpl" class="com.qlc.fieldsense.appointments.dao.AppointmentDaoImpl" >
+    </bean>
+    <bean id="expenseDaoImpl" class="com.qlc.fieldsense.expense.dao.ExpenseDaoImpl" >
+    </bean>
+    <bean id="usersTravelLogsDaoImpl" class="com.qlc.fieldsense.usersTravelLogs.dao.UsersTravelLogsDaoImpl" >
+        <property name="jdbcTemplateCache" ref="jdbcTemplateCache" />
+    </bean>
+    <bean id="attendanceDaoImpl" class="com.qlc.fieldsense.attendance.dao.AttendanceDaoImpl" >
+    </bean>
+    <bean id="notesDaoImpl" class="com.qlc.fieldsense.notes.dao.NotesDaoImpl" >
+    </bean>
+    <bean id="travelsDaoImpl" class="com.qlc.fieldsense.travels.dao.TravelsDaoImpl" >
+    </bean>
+    <bean id="locationDaoImpl" class="com.qlc.fieldsense.location.dao.LocationDaoImpl" >
+    </bean>
+    <bean id="messageDaoImpl" class="com.qlc.fieldsense.message.dao.MessageDaoImpl" >
+    </bean>
+    <bean id="activityDaoImpl" class="com.qlc.fieldsense.activity.dao.ActivityDaoImpl" >
+    </bean>
+    <bean id="activityPurposeDaoImpl" class="com.qlc.fieldsense.activityPurpose.dao.ActivityPurposeDaoImpl" >
+    </bean>
+    <bean id="searchDaoImpl" class="com.qlc.fieldsense.search.dao.SearchDaoImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="ActivityOutcomeDaoImpl" class="com.qlc.fieldsense.activityOutcome.dao.ActivityOutcomeDaoImpl" >
+    </bean>
+    <bean id="mobileDao" class="com.qlc.fieldsense.mobile.dao.MobileDapImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="createAccountDaoImpl" class="com.qlc.fieldsense.createAccount.dao.CreateAccountDaoImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    <bean id="reportsDaoImpl" class="com.qlc.fieldsense.report.dao.ReportsDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" /> <!--Added by jyoti -->
+    </bean>
+    <bean id="expenseCategoryDaoImpl" class="com.qlc.fieldsense.expenseCategory.dao.ExpenseCategoryDaoImpl">
+    </bean>
+    <bean id="statsDaoImpl" class="com.qlc.fieldsense.stats.dao.StatsDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+        <property name="jdbcTemplateStats" ref="jdbcTemplateStats" />
+    </bean>
+    <bean id="customFrmRprtImpl" class="com.qlc.fieldsense.formbuilder.dao.CustomFrmRprtImpl">                                                                           
+    </bean>
+    <bean id="territoryCategoryDaoImpl" class="com.qlc.fieldsense.territoryCategory.dao.TerritoryCategoryDaoImpl">
+    </bean>
+    <bean id="predefinedListDaoImpl" class="com.qlc.fieldsense.predefinedList.dao.PredefinedListDaoImpl">
+    </bean>
+    <bean id="industryCategoryDaoImpl" class="com.qlc.fieldsense.industryCategory.dao.IndustryCategoryDaoImpl">
+    </bean>
+     <bean id="SchedulerDaoImpl" class="com.qlc.fieldsense.scheduler.dao.SchedulerDaoImpl">
+          <property name="jdbcTemplateCache" ref="jdbcTemplateCache" />
+    </bean>
+    <bean id="accountSettingDaoImpl" class="com.qlc.fieldsense.accounts.dao.AccountSettingDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" /> <!-- Added by Jyoti -->
+    </bean>
+    <bean id="customerOfflineDaoImpl" class="com.qlc.fieldsense.customerOffline.dao.CustomerOfflineDaoImpl">
+     </bean>
+
+    <bean id="cacheDaoImpl" class="com.qlc.cacheLocation.dao.CacheLocationDaoImpl">
+        <property name="jdbcTemplateCache" ref="jdbcTemplateCache" />
+         <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+    
+    <bean id="externalDaoImpl" class="com.qlc.fieldsense.external.dao.ExternalDaoImpl"> <!-- added by jyoti, New Feature #29288 -->
+    </bean>
+    
+</beans>
